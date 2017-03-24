@@ -1,0 +1,16 @@
+C:\Dev\GameOfLifeWPF\GameOfLife\bin\Debug\GameOfLife.exe.config
+C:\Dev\GameOfLifeWPF\GameOfLife\bin\Debug\GameOfLife.exe
+C:\Dev\GameOfLifeWPF\GameOfLife\bin\Debug\GameOfLife.pdb
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\ResolveAssemblyReference.cache
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\Xaml\MainForm.g.cs
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\Xaml\App.g.cs
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\GameOfLife_MarkupCompile.cache
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\GameOfLife_MarkupCompile.lref
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\Themes\Generic.baml
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\Xaml\MainForm.baml
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\GameOfLife.g.resources
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\GameOfLife.Properties.Resources.resources
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\GameOfLife.csproj.GenerateResource.Cache
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\GameOfLife.exe
+C:\Dev\GameOfLifeWPF\GameOfLife\obj\Debug\GameOfLife.pdb

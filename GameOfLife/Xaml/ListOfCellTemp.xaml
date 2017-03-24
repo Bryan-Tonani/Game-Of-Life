@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="GameOfLife.ListOfCellTempView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="auto" Width="auto" Name="CellTempList">
+    <ListView FlowDirection="LeftToRight" ItemsSource="{Binding Path=CellList}" BorderThickness="0">
+        <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+                <WrapPanel Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+        </ListBox.ItemsPanel>
+    </ListView>
+</UserControl>

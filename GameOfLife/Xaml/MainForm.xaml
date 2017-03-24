@@ -1,0 +1,55 @@
+﻿<Window x:Class="GameOfLife.MainForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:uti="clr-namespace:GameOfLife.Uti"
+    Title="MainForm" Height="auto" Width="auto"
+    SizeToContent="WidthAndHeight" WindowStyle="ToolWindow">
+    <Window.Resources>
+        <uti:CellStatusToImage x:Key="CellStatusToImage" />
+        <uti:CommandReference x:Key="KeyDownCmdStart" Command="{Binding KeyDownEnterCommand}" />
+        <uti:CommandReference x:Key="KeyDownCmdStop" Command="{Binding KeyDownDeleteCommand}" />
+        <uti:CommandReference x:Key="KeyDownCmdRefresh" Command="{Binding KeyDownF5Command}" />
+        <uti:CommandReference x:Key="KeyDownCmdClose" Command="{Binding KeyDownAltF4Command}" />
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Command="{StaticResource KeyDownCmdStart}" Key="Enter" />
+        <KeyBinding Command="{StaticResource KeyDownCmdStop}" Key="Delete" />
+        <KeyBinding Command="{StaticResource KeyDownCmdRefresh}" Key="F5" />
+        <KeyBinding Command="{StaticResource KeyDownCmdClose}" Modifiers="Alt" Key="F4" />        
+    </Window.InputBindings>
+    
+    <StackPanel>
+        <Menu IsTextSearchEnabled="True">
+            <MenuItem Header="_Settings">
+                <MenuItem Header="World Size" Command="{Binding WorldSizeCmd}" />
+            </MenuItem>
+            <MenuItem Header="_Help" >
+                <MenuItem Header="Enter - Run" Command="{Binding KeyDownEnterCommand}" />
+                <MenuItem Header="Delete - Pause" Command="{Binding KeyDownDeleteCommand}" />
+                <MenuItem Header="F5 - Refresh" Command="{Binding KeyDownF5Command}" />
+                <MenuItem Header="Alt+F4 - Close" Command="{Binding KeyDownAltF4Command}" />
+            </MenuItem>
+        </Menu>
+        <ListView HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding Path=World}"
+              BorderThickness="0" Height="auto" Width="auto">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <ListView FlowDirection="LeftToRight" ItemsSource="{Binding}" BorderThickness="0">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <Image Source="{Binding Status, Converter={StaticResource CellStatusToImage}}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListView>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</Window>
